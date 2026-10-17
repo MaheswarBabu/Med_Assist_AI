@@ -58,7 +58,7 @@ MedAssist-AI/
 - If the API key is missing, verify the `.env` file exists in the project root and contains `OPENAI_API_KEY=...`.
 - If the UI cannot reach the backend, confirm Terminal 1 is running and `BACKEND_URL=http://127.0.0.1:8000` in `.env`.
 - If package installation fails, upgrade pip with `python -m pip install --upgrade pip` and retry.
-- API usage may incur charges under your OpenAI account. Do not share keys with students.
+- API usage may incur charges under your OpenAI account. 
 
 ## Safety note
 
