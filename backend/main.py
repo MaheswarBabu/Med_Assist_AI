@@ -31,8 +31,11 @@ def chat(request: ChatRequest):
         return {"answer": answer}
     except RuntimeError as exc:
         raise HTTPException(status_code=500, detail=str(exc))
-    except Exception:
-        # Keep provider/API details out of the public response.
+    except Exception as exc:
+        print(
+            f"Chat endpoint error: {type(exc).__name__}: {exc}",
+            flush=True
+        )
         raise HTTPException(
             status_code=502,
             detail="Unable to generate a response. Check backend logs and API configuration."
